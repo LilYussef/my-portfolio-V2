@@ -49,6 +49,7 @@ const allProjects = [
     image: "/images/PhishGuard AI.png",
     technologies: ["Next.js", "N8N", "WebHook", "Tailwind CSS"],
     category: "Full-Stack",
+    
     featured: true,
   },
   {
@@ -156,33 +157,37 @@ export default function ProjectsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
 
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50">
-                  <div className={project.id === 6 ? "flex items-center justify-center" : "flex space-x-4"}>
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-gray-800/80 backdrop-blur-sm rounded-full text-white hover:bg-gray-700/80 transition-colors duration-200"
-                    >
-                      <Github className="w-5 h-5" />
-                    </motion.a>
-                    {project.id !== 6 && (
-                      <motion.a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="p-3 bg-purple-600/80 backdrop-blur-sm rounded-full text-white hover:bg-purple-700/80 transition-colors duration-200"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </motion.a>
-                    )}
+                {/* Overlay Links - hidden for in-progress projects */}
+                {!project.featured && (
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50">
+                    <div className="flex space-x-4">
+                      {project.github && (
+                        <motion.a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="p-3 bg-gray-800/80 backdrop-blur-sm rounded-full text-white hover:bg-gray-700/80 transition-colors duration-200"
+                        >
+                          <Github className="w-5 h-5" />
+                        </motion.a>
+                      )}
+                      {project.live && (
+                        <motion.a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="p-3 bg-purple-600/80 backdrop-blur-sm rounded-full text-white hover:bg-purple-700/80 transition-colors duration-200"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Featured Badge */}
                 {project.featured && (
