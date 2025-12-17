@@ -39,8 +39,6 @@ const allProjects = [
     image: "/images/SaaS Analytics Dashboard.png",
     technologies: ["Next.js", "Firebase", "Tailwind CSS"],
     category: "Full-Stack",
-    github: "https://github.com",
-    live: "https://example.com",
     featured: true,
   },
   {
@@ -51,8 +49,6 @@ const allProjects = [
     image: "/images/PhishGuard AI.png",
     technologies: ["Next.js", "N8N", "WebHook", "Tailwind CSS"],
     category: "Full-Stack",
-    github: "https://github.com",
-    live: "https://example.com",
     featured: true,
   },
   {
