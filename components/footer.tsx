@@ -133,7 +133,7 @@ export default function Footer() {
           className="pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
           <div className="flex items-center space-x-2 text-gray-400 text-sm">
-            <span>© {new Date().getFullYear()} Yussef Ahmed. All Rights Resived</span>
+            <span>© {new Date().getFullYear()} Yussef Ahmed. All Rights Received</span>
           </div>
 
           <div className="flex items-center space-x-6 text-sm text-gray-400">
