@@ -71,6 +71,17 @@ const allProjects = [
     category: "Game Development",
     github: "https://github.com/LilYussef/VR-Classroom-Using-Unity-Engine",
     featured: false,
+  },
+  {
+    id: 7,
+    title: "SYET Network Scanner",
+    description:
+      "High-performance multi-threaded TCP port scanner in C++ for Windows and Linux, designed for pentesters and network enthusiasts.",
+    image: "/images/SYET_Scanner.png",
+    technologies: ["C++", "Windows", "Linux"],
+    category: "CyberSecurity",
+    github: "https://github.com/LilYussef/Syet-Scanner-For-Network-Scanning",
+    featured: false,
   }
 ]
 
